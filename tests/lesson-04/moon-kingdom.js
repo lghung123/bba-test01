@@ -14,6 +14,7 @@ function createCharacters() {
                         {name: 'Yoshi', level: 4, health: 677},
                         {name: 'Phong', level: 5, health: 333}];
 
+    // Tạo biến charactersPowerUp
     charactersPowerUp = characters.map(characters => ({
         name: characters.name.toUpperCase(),
         level: characters.level * 2,
@@ -24,14 +25,15 @@ function createCharacters() {
         console.log(`Tên: ${charactersPowerUp[i].name}; Cấp: ${charactersPowerUp[i].level}; Máu: ${charactersPowerUp[i].health}`);
     }
 
+    // Tạo biến possibleWinners
     possibleWinners = charactersPowerUp.filter(charactersPowerUp => charactersPowerUp.health > 1000);
-    console.log('Danh sách các nhân vật có thể thắng màn');
+    console.log('\nDanh sách các nhân vật có thể thắng màn');
     for (let i = 0; i < possibleWinners.length; i++) {
         console.log(`Tên: ${possibleWinners[i].name}; Cấp: ${possibleWinners[i].level}; Máu: ${possibleWinners[i].health}`);
     }
 }
 
-createCharacters()
+createCharacters();
 
 /* Bài 2: Tạo hàm printLeaderboard:
 ● Nhận vào tham số: players là mảng các object: [{name: "Mario", score:

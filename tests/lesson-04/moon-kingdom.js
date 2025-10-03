@@ -15,7 +15,7 @@ function createCharacters() {
                         {name: 'Phong', level: 5, health: 333}];
 
     // Tạo biến charactersPowerUp
-    charactersPowerUp = characters.map(characters => ({
+    const charactersPowerUp = characters.map(characters => ({
         name: characters.name.toUpperCase(),
         level: characters.level * 2,
         health: characters.health * 3
@@ -26,7 +26,7 @@ function createCharacters() {
     }
 
     // Tạo biến possibleWinners
-    possibleWinners = charactersPowerUp.filter(charactersPowerUp => charactersPowerUp.health > 1000);
+    const possibleWinners = charactersPowerUp.filter(charactersPowerUp => charactersPowerUp.health > 1000);
     console.log('\nDanh sách các nhân vật có thể thắng màn');
     for (let i = 0; i < possibleWinners.length; i++) {
         console.log(`Tên: ${possibleWinners[i].name}; Cấp: ${possibleWinners[i].level}; Máu: ${possibleWinners[i].health}`);
@@ -41,7 +41,7 @@ createCharacters();
 ● Sắp xếp mảng người chơi theo thứ tự score từ cao đến thấp.
 ● In ra bảng xếp hạng. Lưu ý: với 3 vị trí 1, 2, 3, hãy thêm huy chương phía
 trước*/
-players = [{name: 'Mario', score: 1_000},
+const players = [{name: 'Mario', score: 1_000},
            {name: 'Luigi', score: 5_000},
            {name: 'Peach', score: 2_000},
            {name: 'Yoshi', score: 300},
